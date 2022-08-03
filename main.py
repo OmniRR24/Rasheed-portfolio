@@ -1,12 +1,13 @@
 from flask import Flask, render_template, request
 from smtplib import SMTP
+import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 
-USER = "demoinfo4841@gmail.com"
-PASSWORD = "wizeynjsmcctahwd"
-RECEIVER = "kazeemrasheed3063@gmail.com"
+USER = os.environ['USER']
+PASSWORD = os.environ['AUTH']
+RECEIVER = os.environ['RECIPIENT']
 
 
 @app.route('/', methods=['GET', 'POST'])
