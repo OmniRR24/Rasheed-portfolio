@@ -5,9 +5,9 @@ import os
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 
-USER = os.environ['USER']
-PASSWORD = os.environ['AUTH']
-RECEIVER = os.environ['RECIPIENT']
+USER = os.environ.get('USER')
+PASSWORD = os.environ.get('AUTH')
+RECEIVER = os.environ.get('RECIPIENT')
 
 
 @app.route('/', methods=['GET', 'POST'])
