@@ -1,0 +1,99 @@
+{% include 'header.html' %}
+<!--Top section-->
+    <section id="home-section">
+        <div class="home-container">
+            <div class="big-heading-container">
+                    <span class="big-heading">H</span>
+                    <span class="big-heading">E</span>
+                    <span class="big-heading">L</span>
+                    <span class="big-heading">L</span>
+                    <span class="big-heading">O</span>
+                    <span class="big-heading">!</span>
+            </div>
+            <div class="intro-container">
+                <h2 class="big-name" data-aos="fade-up">I'M RASHEED</h2>
+                <p class="intro-text" data-aos="fade-up">
+                    I am a fullstack developer based in Lagos, Nigeria focused on creating interactive digital experiences on the web, working with brands and industry leaders such as DISNEY, PAYSTACK, JELLY, and NULL amongst others to achieve this.
+                </p>
+                <img class="home-gif" alt="programmer gif" src="https://media3.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif?cid=ecf05e474rhnb2j1lbj7tfp7eex2g1q9ftsu7418z083d7ss&rid=giphy.gif&ct=g">
+            </div>
+            <a class="btn btn-lg home-btn" data-aos="fade-in">Contact Me</a>
+        </div>
+    </section>
+    <hr>
+<!--Skills section-->
+    <section id="skills-section">
+        <div class="skill-container">
+            <div class="skill-header-div">
+                <h2 class="skill-header" data-aos="fade-up">MY SKILLS</h2>
+            </div>
+            <div class="skill-row skill-row-top" data-aos="fade-up">
+              <img class="skill-img python left-skill-img" src="https://media1.giphy.com/media/LMt9638dO8dftAjtco/200.webp?cid=ecf05e479gwnk8y12pvvximbn3x47n5ch6f1r38tklg0hpcd&rid=200.webp&ct=s" alt="Python-img">
+              <h3 class="skill">Python Software Engineering</h3>
+              <p>I started learning to code when i was 12 years old because i wanted
+                to make my own video games. Over time, i have gained a wealth of
+                experience designing and developing mobile and web applications.
+              </p>
+            </div>
+            <div class="skill-row" data-aos="fade-up">
+              <img class="skill-img web-dev" src="https://media0.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif?cid=ecf05e47uasgvx8h3gd2d813tb7pz0quu1zd0cnruhp7p2w6&rid=giphy.gif&ct=g" alt="web-dev-img">
+              <h3 class="skill">Full Stack Web Development</h3>
+              <p>I started learning to code when i was 12 years old because i wanted
+                to make my own video games. Over time, i have gained a wealth of
+                experience designing and developing mobile and web applications.
+              </p>
+            </div>
+            <div class="skill-row" data-aos="fade-up">
+                <img class="skill-img data-science left-skill-img" src="https://media1.giphy.com/media/U4FkC2VqpeNRHjTDQ5/200w.webp?cid=ecf05e47ckp0qp55p19wr6xsxc7q4rs3gxerzkdywtf7rmdj&rid=200w.webp&ct=g" alt="Data-science-img">
+                <h3 class="skill">Data Science</h3>
+                <p>I started learning to code when i was 12 years old because i wanted
+                to make my own video games. Over time, i have gained a wealth of
+                experience designing and developing mobile and web applications.
+                </p>
+            </div>
+        </div>
+    </section>
+    <hr>
+<!--Contact Section-->
+    <section id="contact-section">
+        <div class="contact-container">
+            {% if not message_sent %}
+                <h1 class="contact-header" data-aos="fade-up">GET IN TOUCH!</h1>
+                <form class="contact-form row g-3 needs-validation" novalidate method="post" action="/">
+                  <div class="form-floating col-lg-6" data-aos="fade-up">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Tell us your name" required>
+                    <label for="name" class="form-label">Name</label>
+                      <div class="valid-feedback">
+                          Looks good!
+                      </div>
+                  </div>
+                  <div class="col-lg-6 form-floating" data-aos="fade-up">
+                    <input type="email" class="form-control field" id="email" name="email" aria-describedby="emailHelp" placeholder="name@example.com" required>
+                    <label for="email" class="form-label">Email address</label>
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        PLease provide your email address!
+                    </div>
+                  </div>
+                  <div class="col-12 form-floating" data-aos="fade-up">
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Type of Project/Offer">
+                    <label class="form-label" for="subject">Subject</label>
+                  </div>
+                  <div class="col-12 form-floating" data-aos="fade-up">
+                    <textarea class="form-control" name="desc" rows="3" style="height: 20vh"></textarea>
+                    <label class="form-label">Description</label>
+                  </div>
+                  <div class="col-12" data-aos="fade-up">
+                    <button type="submit" class="btn btn-lg btn-block submit-button">Submit</button>
+                  </div>
+                </form>
+            {% else %}
+                <span class="confirmation-message">Message Sent!</span>
+                <img class="confirmation-gif" src="https://media1.giphy.com/media/cxHsYQNk8EQRKHAOU8/200w.webp?cid=ecf05e474qetpui8m7erwze499s6d0s7qagpjm6zo4jfz27v&rid=200w.webp&ct=s">
+            {% endif %}
+        </div>
+    </section>
+{% include 'footer.html' %}
