@@ -29,7 +29,7 @@ p {
 }
 
 .navbar-toggler {
-    font-size: clamp(.8rem, 3vw, 3.1vw);
+    font-size: clamp(1rem, 3vw, 3.1vw);
     margin-left: 5%;
     color: #FBFFFE;
 }
@@ -66,7 +66,7 @@ section {
 }
 
 .big-heading-container {
-    font-size: clamp(5.2rem, 13vw, 13.5vw);
+    font-size: clamp(5.3rem, 13vw, 13.5vw);
     font-family: 'Monoton', cursive;
     margin: 8% 0;
     letter-spacing: -.05em;
@@ -127,8 +127,8 @@ section {
     text-align: center;
 }
 
-.skill-header {
-    font-size: 3vw;
+.section-header {
+    font-size: clamp(1.8rem, 3vw, 3rem);
     font-family: 'open-sans', sans-serif;
     font-weight: bold;
     padding: 3% 0 0;
@@ -145,7 +145,7 @@ section {
 }
 
 .skill {
-    font-size: 2.1vw;
+    font-size: clamp(1.5rem, 2.1vw, 2.1rem;);
     margin-bottom: 2%;
     display: inline-block;
     position: relative;
@@ -170,7 +170,6 @@ section {
   transform-origin: bottom left;
 }
 
-
 .left-skill-img {
   width: 22%;
   float: left;
@@ -190,15 +189,9 @@ section {
     justify-content: center;
 }
 
-.contact-header {
-    font-size: 3vw;
-    padding: 4% 0;
-    font-family: 'open-sans', sans-serif;
-    font-weight: bold;
-}
-
 .contact-form {
     width: 60%;
+    margin-top: 2%;
 }
 
 .form-label {
@@ -286,12 +279,21 @@ footer-icon {
     .nav-link {
         color: #FBFFFE;
     }
+    .big-heading-container {
+        margin: 4rem 0;
+        background-image: linear-gradient(45deg, #013440, #3f2b96);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
     .intro-container {
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
         margin: 0 auto;
+        color: #013440;
     }
     .home-gif {
         width: 100%;
@@ -299,8 +301,17 @@ footer-icon {
     .intro {
         margin-bottom: 10%;
     }
-    .home-container {
-        color: #013440;
+        .skill-row {
+        width: 90%;
+    }
+    .left-skill-img {
+      width: 36%;
+    }
+    .python {
+        width: 45%;
+    }
+    .web-dev {
+      width: 100%;
     }
 }
 
