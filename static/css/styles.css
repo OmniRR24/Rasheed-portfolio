@@ -52,29 +52,9 @@ p {
 }
 
 .nav-link {
-  font-size: 1.3vw;
+  font-size: clamp(.65rem, 1.3vw, 1.3rem);
   font-family: "Montserrat-Light", sans-serif;
   color: #013440;
-}
-
-.navbar .navbar-nav .nav-item {
-  position: relative;
-}
-.navbar .navbar-nav .nav-item::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background-color: #0a58ca;
-  width: 0%;
-  content: "";
-  height: 2px;
-  transition: all 0.5s;
-}
-
-.navbar .navbar-nav .nav-item:hover::after {
-  width: 75%;
 }
 
 section {
@@ -86,12 +66,10 @@ section {
 }
 
 .big-heading-container {
-    font-size: clamp(4.6rem, 13vw, 13.5vw);
+    font-size: clamp(5.2rem, 13vw, 13.5vw);
     font-family: 'Monoton', cursive;
     margin: 8% 0;
     letter-spacing: -.05em;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #fff;
     animation: 2s ease-out 0s 1 come-down;
 }
 
@@ -108,7 +86,7 @@ section {
 .big-name {
     font-family: 'open-sans', sans-serif;
     font-weight: 700;
-    font-size: clamp(1.65rem, 3.5vw, 3.5rem);
+    font-size: clamp(1.85rem, 3.5vw, 3.5rem);
     margin-bottom: max(2rem, 5vw);
     letter-spacing: .4em;
 }
@@ -268,14 +246,45 @@ footer-icon {
 }
 
 @media only screen and (min-width: 991px){
+    .navbar .navbar-nav .nav-item {
+      position: relative;
+    }
+    .navbar .navbar-nav .nav-item::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-color: #0a58ca;
+      width: 0%;
+      content: "";
+      height: 2px;
+      transition: all 0.5s;
+    }
+
+    .navbar .navbar-nav .nav-item:hover::after {
+      width: 75%;
+    }
+    .big-heading-container {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #fff;
+    }
     .home-gif {
         padding-left: 5%;
     }
 }
 
 @media only screen and (max-width: 820px){
+    section {
+        margin: 10% 5%;
+    }
     .navbar {
         max-height: 5rem;
+        background-color: #013440;
+        color: #FBFFFE;
+    }
+    .nav-link {
+        color: #FBFFFE;
     }
     .intro-container {
         display: flex;
@@ -292,10 +301,6 @@ footer-icon {
     }
     .home-container {
         color: #013440;
-    }
-    .navbar {
-        background-color: #013440;
-        color: #FBFFFE;
     }
 }
 
@@ -315,36 +320,19 @@ footer-icon {
   }
 }
 
-[data-aos="line-animation"] {
-    transform: scaleX(0);
-    opacity: 0;
-    transition-property: transform, opacity;
-    &.aos-animate {
-    transform: scaleX(100%);
-    opacity: 1;
-}
-
 @keyframes come-up {
-  0% {
-    transform: translateY(100%);
-}
+  0% {transform: translateY(100%);}
   100% {transform: translateY(0);}
 }
 
 @keyframes come-down {
-  0% {
-    transform: translateY(-100%);
-    }
+  0% {transform: translateY(-100%);}
   100% {transform: translateY(0);}
 }
 
 @keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
+    0% {opacity: 0;}
 
-    100% {
-        opacity: 1;
-    }
+    100% {opacity: 1;}
 }
 
