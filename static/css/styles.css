@@ -1,8 +1,6 @@
 body {
     background-image: linear-gradient(to bottom, #e1eec3, #3f2b96);
     color: #FBFFFE;
-    height: 100%;
-    width: 100%;
     margin: 0;
     box-sizing: border-box;
 }
@@ -22,6 +20,7 @@ p {
 }
 
 .navbar {
+  height: 12vh;
   padding: 1.5% 0 1.5%;
   color: #013440;
   background-color: #FBFFFE;
@@ -86,9 +85,9 @@ section {
 }
 
 .big-heading-container {
-    font-size: 12vw;
+    font-size: clamp(7rem, 13vw, 13.5vw);
     font-family: 'Monoton', cursive;
-    margin: 7vw 0 7vw;
+    margin: 8% 0;
     letter-spacing: -.05em;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff;
@@ -142,6 +141,9 @@ section {
 
 .home-btn:hover {
     color: #3f2b96;
+}
+
+.skill-container {
 }
 
 .skill-header-div {
@@ -220,10 +222,6 @@ section {
 
 .contact-form {
     width: 60%;
-}
-
-.field {
-    height: 49vh;
 }
 
 .form-label {
