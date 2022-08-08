@@ -128,10 +128,10 @@ section {
 }
 
 .section-header {
-    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-size: clamp(2.3rem, 3vw, 3rem);
     font-family: 'open-sans', sans-serif;
     font-weight: bold;
-    padding: 3% 0 0;
+    padding: max(3%, 2rem) 0 0;
 }
 
 .skill-row {
@@ -209,7 +209,6 @@ section {
 .submit-button {
     margin: 3% 25%;
     width: 50%;
-    font-size: 1.6vw;
     background-color: #013440;
     color: #FBFFFE;
 }
@@ -225,7 +224,7 @@ footer-icon {
 .copyright {
     color: #FBFFFE;
     text-align: center;
-    font-size: 1vw;
+    font-size: 1rem;
 }
 
 .confirmation-message {
@@ -301,17 +300,22 @@ footer-icon {
     .intro {
         margin-bottom: 10%;
     }
-        .skill-row {
-        width: 90%;
+    .skill-row {
+        width: 100%;
     }
     .left-skill-img {
-      width: 36%;
+        width: 34.75%;
     }
     .python {
-        width: 45%;
+        float: none;
+        margin: 0 32.625% 10%;
     }
     .web-dev {
-      width: 100%;
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    .contact-form {
+        width: 100%;
     }
 }
 
