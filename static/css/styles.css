@@ -16,7 +16,7 @@ hr {
 
 p {
     font-family: "Montserrat-Light", sans-serif;
-    font-size: clamp(.8rem, 1.5vw, 10rem);
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
 
 .navbar {
@@ -31,6 +31,7 @@ p {
 .navbar-toggler {
     font-size: clamp(.8rem, 3vw, 3.1vw);
     margin-left: 5%;
+    color: #FBFFFE;
 }
 
 .navbar-brand {
@@ -107,8 +108,8 @@ section {
 .big-name {
     font-family: 'open-sans', sans-serif;
     font-weight: 700;
-    font-size: clamp(1.5rem, 3.5vw, 10vw);
-    margin: 0 0 5vw;
+    font-size: clamp(1.65rem, 3.5vw, 3.5rem);
+    margin-bottom: max(2rem, 5vw);
     letter-spacing: .4em;
 }
 
@@ -288,6 +289,13 @@ footer-icon {
     }
     .intro {
         margin-bottom: 10%;
+    }
+    .home-container {
+        color: #013440;
+    }
+    .navbar {
+        background-color: #013440;
+        color: #FBFFFE;
     }
 }
 
