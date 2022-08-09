@@ -61,7 +61,7 @@
         <div class="contact-container">
             {% if not message_sent %}
                 <h1 class="section-header" data-aos="fade-up">GET IN TOUCH!</h1>
-                <form class="contact-form row g-3 needs-validation" novalidate method="post" action="/">
+                <form class="contact-form row g-3 needs-validation" novalidate method="post" action="mailto:kazeemrasheed3063@gmail.com?subject={{subject}}&body=message%20goes%20here">
                   <div class="form-floating col-lg-6" data-aos="fade-up">
                     <input type="text" class="form-control" id="name" name="name" placeholder="Tell us your name" required>
                     <label for="name" class="form-label">Name</label>
@@ -89,7 +89,7 @@
                     <label class="form-label">Description</label>
                   </div>
                   <div class="col-12" data-aos="fade-up">
-                    <a class="btn btn-lg btn-block submit-button" href="mailto:kazeemrasheed3063@gmail.com?subject={{subject}}&body={{message}}%20goes%20here">Submit</a>
+                    <button type="submit" class="btn btn-lg btn-block submit-button">Submit</button>
                   </div>
                 </form>
             {% else %}
