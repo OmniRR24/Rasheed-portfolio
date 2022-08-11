@@ -61,7 +61,7 @@
         <div class="contact-container">
             {% if not message_sent %}
                 <h1 class="section-header" data-aos="fade-up">GET IN TOUCH!</h1>
-                <form class="contact-form row g-3 needs-validation" novalidate method="post" action="mailto:kazeemrasheed3063@gmail.com?subject={{subject}}&body=message%20goes%20here">
+                <form class="contact-form row g-3 needs-validation" novalidate method="post" action="mailto:kazeemrasheed3063@gmail.com?subject={{subject}}&body={{message}}">
                   <div class="form-floating col-lg-6" data-aos="fade-up">
                     <input type="text" class="form-control" id="name" name="name" placeholder="Tell us your name" required>
                     <label for="name" class="form-label">Name</label>
@@ -81,15 +81,19 @@
                     </div>
                   </div>
                   <div class="col-12 form-floating" data-aos="fade-up">
-                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Type of Project/Offer">
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Type of Project/Offer" required>
                     <label class="form-label" for="subject">Subject</label>
                   </div>
                   <div class="col-12 form-floating" data-aos="fade-up">
-                    <textarea class="form-control" name="desc" rows="3" style="height: 20vh"></textarea>
+                    <textarea class="form-control" name="desc" rows="3" style="height: 20vh" required></textarea>
                     <label class="form-label">Description</label>
                   </div>
                   <div class="col-12" data-aos="fade-up">
-                    <button type="submit" class="btn btn-lg btn-block submit-button">Submit</button>
+<!--                    <button type="submit" class="btn btn-lg btn-block submit-button">-->
+<!--                        <span class="btn-text">Submit</span>-->
+<!--                        <i class="fa-solid fa-check btn-icon"></i>-->
+<!--                    </button>-->
+                      <button type="submit" class="btn btn-lg btn-block submit-button">Submit</button>
                   </div>
                 </form>
             {% else %}

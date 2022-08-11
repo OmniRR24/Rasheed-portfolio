@@ -13,10 +13,12 @@ RECEIVER = os.environ.get('RECIPIENT')
 @app.route('/', methods=['GET', 'POST'])
 def home():
     sent = False
+    subject = None
+    message = None
     if request.method == 'POST':
         name = request.form.get('name')
         email = request.form.get('email')
-        subject = request.form.get('subject')
+        subject = request.form.get('subject').upper()
         description = request.form.get('desc')
         message = f"Email Address: {email}\n\n" \
                   f"Name: {name.title()}\n\n" \
@@ -30,8 +32,7 @@ def home():
     #                                                                    f'Client-Email: {email}\n'
     #                                                                    f'Description: {description}\n')
         sent = True
-        return render_template('index.html', message_sent=sent, subject=subject.upper(), message=message)
-    return render_template('index.html', message_sent=sent)
+    return render_template('index.html', message_sent=sent, subject=subject, message=message)
 
 
 if __name__ == '__main__':

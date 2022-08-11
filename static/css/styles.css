@@ -207,15 +207,34 @@ section {
 }
 
 .submit-button {
-    margin: 3% 25%;
-    width: 50%;
+    width: 30%;
+    margin: 3% auto;
     background-color: #013440;
     color: #FBFFFE;
+    display: block;
 }
 
-.submit-button:hover {
-    color: #e1eec3;
+/* .submit-button:focus {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border-color: #44c08a;
+    background-color: #44c08a;
 }
+
+.submit-button:focus .btn-text{
+    display: none;
+}
+
+.submit-button:focus .btn-icon{
+    display: block;
+}
+
+.btn-icon {
+    display: none;
+}
+
+*/
 
 footer-icon {
     width: 2vw;
