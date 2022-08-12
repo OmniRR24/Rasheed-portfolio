@@ -362,6 +362,9 @@ footer-icon {
     .contact-form {
         width: 100%;
     }
+    .submit-button {
+        width: 50%;
+    }
 }
 
 @keyframes move-in-left {
