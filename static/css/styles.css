@@ -96,10 +96,6 @@ section {
     line-height: 1.7em;
 }
 
-.intro-text:hover {
-    color: #fff;
-}
-
 .home-gif {
     top: 0;
     right: 0;
@@ -118,10 +114,7 @@ section {
 }
 
 .home-btn:hover {
-    color: #3f2b96;
-}
-
-.skill-container {
+    color: #e1eec3;
 }
 
 .skill-header-div {
