@@ -19,7 +19,7 @@
                 </div>
                 <img class="home-gif col-lg-6" alt="programmer gif" src="https://media3.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif?cid=ecf05e474rhnb2j1lbj7tfp7eex2g1q9ftsu7418z083d7ss&rid=giphy.gif&ct=g">
             </div>
-            <a class="btn btn-lg home-btn" data-aos="fade-in">Contact Me</a>
+            <a class="btn btn-lg home-btn" href="{{url_for('contact')}}" data-aos="fade-in">Contact Me</a>
         </div>
     </section>
     <hr>
@@ -55,51 +55,8 @@
             </div>
         </div>
     </section>
-    <hr>
 <!--Contact Section-->
-    <section id="contact-section">
-        <div class="contact-container">
-            {% if not message_sent %}
-                <h1 class="section-header" data-aos="fade-up">GET IN TOUCH!</h1>
-                <form class="contact-form row g-3 needs-validation" novalidate method="post" action="/">
-                  <div class="form-floating col-lg-6" data-aos="fade-up">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Tell us your name" required>
-                    <label for="name" class="form-label">Name</label>
-                      <div class="valid-feedback">
-                          Looks good!
-                      </div>
-                  </div>
-                  <div class="col-lg-6 form-floating" data-aos="fade-up">
-                    <input type="email" class="form-control field" id="email" name="email" aria-describedby="emailHelp" placeholder="name@example.com" required>
-                    <label for="email" class="form-label">Email address</label>
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                        PLease provide your email address!
-                    </div>
-                  </div>
-                  <div class="col-12 form-floating" data-aos="fade-up">
-                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Type of Project/Offer" required>
-                    <label class="form-label" for="subject">Subject</label>
-                  </div>
-                  <div class="col-12 form-floating" data-aos="fade-up">
-                    <textarea class="form-control" name="desc" rows="3" style="height: 20vh" required></textarea>
-                    <label class="form-label">Description</label>
-                  </div>
-                  <div class="col-12" data-aos="fade-up">
-<!--                    <button type="submit" class="btn btn-lg btn-block submit-button">-->
-<!--                        <span class="btn-text">Submit</span>-->
-<!--                        <i class="fa-solid fa-check btn-icon"></i>-->
-<!--                    </button>-->
-                      <button type="submit" class="btn btn-lg btn-block submit-button">Submit</button>
-                  </div>
-                </form>
-            {% else %}
-                <span class="confirmation-message">Message Sent!</span>
-                <img class="confirmation-gif" src="https://media1.giphy.com/media/cxHsYQNk8EQRKHAOU8/200w.webp?cid=ecf05e474qetpui8m7erwze499s6d0s7qagpjm6zo4jfz27v&rid=200w.webp&ct=s">
-            {% endif %}
-        </div>
-    </section>
+    <div class="contact-text-container" data-aos="zoom-in-up">
+        <a class="section-header contact-text" href="{{ url_for('contact') }}">Let's Work Together, Contact Me!</a>
+    </div>
 {% include 'footer.html' %}

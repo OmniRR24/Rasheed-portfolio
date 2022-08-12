@@ -12,28 +12,33 @@ RECEIVER = os.environ.get('RECIPIENT')
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    sent = False
     # subject = None
     # message = None
-    if request.method == 'POST':
-        name = request.form.get('name')
-        email = request.form.get('email')
-        subject = request.form.get('subject').upper()
-        description = request.form.get('desc')
-        # message = f"Email Address: {email}\n\n" \
-        #           f"Name: {name.title()}\n\n" \
-        #           f"Project Description: {description.title()}"
-        with SMTP('smtp.gmail.com') as connection:
-            connection.starttls()
-            connection.login(user=USER, password=PASSWORD)
-            connection.sendmail(from_addr=USER, to_addrs=RECEIVER, msg=f'Subject: {subject.upper()}\n\n'
-                                                                       f'<b>You have a new message!<b>'
-                                                                       f'Client-Name: {name.title()}\n'
-                                                                       f'Client-Email: {email}\n'
-                                                                       f'Description: {description}\n')
-        sent = True
+    # if request.method == 'POST':
+    #     name = request.form.get('name')
+    #     email = request.form.get('email')
+    #     subject = request.form.get('subject').upper()
+    #     description = request.form.get('desc')
+    #     with SMTP('smtp.gmail.com', 587) as connection:
+    #         connection.starttls()
+    #         connection.login(user=USER, password=PASSWORD)
+    #         connection.sendmail(from_addr=USER, to_addrs=RECEIVER, msg=f'Subject: {subject.upper()}\n\n'
+    #                                                                    f'You have a new message!'
+    #                                                                    f'Client-Name: {name.title()}\n'
+    #                                                                    f'Client-Email: {email}\n'
+    #                                                                    f'Description: {description}\n')
+    #         connection.close()
+    #     sent = True
         # return render_template('index.html', message_sent=sent, subject=subject, message=message)
-    return render_template('index.html', message_sent=sent)
+    return render_template('index.html')
+
+
+@app.route('/contact-me', methods=['GET', 'POST'])
+def contact():
+    sent = False
+    if request.method == 'POST':
+        sent = True
+    return render_template('contact.html', message_sent=sent)
 
 
 if __name__ == '__main__':

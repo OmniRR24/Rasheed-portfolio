@@ -3,6 +3,7 @@ body {
     color: #FBFFFE;
     margin: 0;
     box-sizing: border-box;
+    overflow: scroll;
 }
 
 hr {
@@ -189,20 +190,38 @@ section {
     justify-content: center;
 }
 
+.contact-text-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: max(2rem, 5%)
+}
+
+.contact-text {
+    text-decoration: overline underline;
+    color: #E5E1D8;
+    font-size: clamp(2.3rem, 5vw, 5rem);
+}
+
+.contact-text:hover {
+    text-decoration: overline underline;
+    color: #e1eec3;
+}
+
 .contact-form {
     width: 60%;
     margin-top: 2%;
 }
 
 .form-label {
-    font-size: clamp(1.2rem, 1.2vw, 1.5rem);
+    font-size: clamp(1.1rem, 1.1vw, 1.5rem);
     font-family: "Montserrat-Light", sans-serif;
     color: #013440;
+    opacity: 0.9;
 }
 
 .form-text {
     font-size: clamp(.85rem, .85vw, 1rem);
-    color: #e1eec3;
+    color: #FBFFFE;
     font-family: "Montserrat-Light", sans-serif;
 }
 
@@ -214,7 +233,19 @@ section {
     display: block;
 }
 
-/* .submit-button:focus {
+.submit-button:hover {
+    color: #e1eec3;
+}
+
+.btn-icon {
+    display: none;
+}
+
+.submit-button *{
+    transition: display .1s;
+}
+
+form:valid .submit-button:focus {
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -222,19 +253,13 @@ section {
     background-color: #44c08a;
 }
 
-.submit-button:focus .btn-text{
+form:valid .submit-button:focus .btn-text{
     display: none;
 }
 
-.submit-button:focus .btn-icon{
+form:valid .submit-button:focus .btn-icon{
     display: block;
 }
-
-.btn-icon {
-    display: none;
-}
-
-*/
 
 footer-icon {
     width: 2vw;
@@ -243,11 +268,12 @@ footer-icon {
 .copyright {
     color: #FBFFFE;
     text-align: center;
-    font-size: 1rem;
+    font-size: max(1rem, 1.2vw);
 }
 
 .confirmation-message {
-    font-size: 3vw;
+    font-size: 7vw;
+    letter-spacing: 1vw;
     font-family: 'Open-sans', sans-serif;
     font-weight: bold;
 }

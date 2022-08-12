@@ -40,18 +40,22 @@
       <h2 class="navbar-brand">KAZEEM RASHEED</h2>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
-          </li>
+          {% if request.path != '/' %}
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+          {% endif %}
           <li class="nav-item">
             <a class="nav-link" href="#skills-section">Skills</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/">Portfolio</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact-section">Contact</a>
-          </li>
+          {% if request.path != '/contact-me' %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('contact')}}">Contact</a>
+            </li>
+          {% endif %}
         </ul>
       </div>
     </div>
