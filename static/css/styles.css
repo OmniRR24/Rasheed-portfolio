@@ -11,7 +11,7 @@ hr {
     border-top: dotted;
     border-color: #FBFFFE;
     border-width: 5px;
-    width: 15%;
+    width: 20%;
     margin: 5% auto;
 }
 
@@ -20,6 +20,8 @@ p {
     font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
 
+
+/* Navigation Bar */
 .navbar {
   height: 14vh;
   padding: 1.5% 0 1.5%;
@@ -31,17 +33,19 @@ p {
 
 .navbar-toggler {
     font-size: clamp(1rem, 3vw, 3.1vw);
-    margin-left: 5%;
     color: #FBFFFE;
 }
 
 .navbar-brand {
-  padding: 0;
-  margin: 0 7%;
   font-weight: bold;
   font-size: clamp(.75rem, 1.75vw, 1.8vw);
   bottom: 0;
   text-align: center;
+  color: #013440;
+}
+
+.navbar-brand:hover {
+    color: #013440;
 }
 
 .navbar-nav {
@@ -58,10 +62,16 @@ p {
   color: #013440;
 }
 
+.nav-link:hover {
+    color: #3f2b96;
+}
+
 section {
     margin: 5% 10%;
 }
 
+
+/* Home Page */
 .home-container {
     text-align: center;
 }
@@ -115,8 +125,11 @@ section {
 
 .home-btn:hover {
     color: #e1eec3;
+    background-color: #013440;
 }
 
+
+/* Skill Section */
 .skill-header-div {
     text-align: center;
 }
@@ -139,7 +152,7 @@ section {
 }
 
 .skill {
-    font-size: clamp(1.5rem, 2.1vw, 2.1rem;);
+    font-size: clamp(1.5rem, 2.1vw, 2.1rem);
     margin-bottom: 2%;
     display: inline-block;
     position: relative;
@@ -186,7 +199,7 @@ section {
 .contact-text-container {
     width: 100%;
     text-align: center;
-    margin-bottom: max(2rem, 5%)
+    margin: 10% 0;
 }
 
 .contact-text {
@@ -200,6 +213,8 @@ section {
     color: #e1eec3;
 }
 
+
+/* Contact Page */
 .contact-form {
     width: 60%;
     margin-top: 2%;
@@ -254,16 +269,6 @@ form:valid .submit-button:focus .btn-icon{
     display: block;
 }
 
-footer-icon {
-    width: 2vw;
-}
-
-.copyright {
-    color: #FBFFFE;
-    text-align: center;
-    font-size: max(1rem, 1.2vw);
-}
-
 .confirmation-message {
     font-size: 7vw;
     letter-spacing: 1vw;
@@ -275,26 +280,48 @@ footer-icon {
     width: 30%;
 }
 
-@media only screen and (min-width: 991px){
-    .navbar .navbar-nav .nav-item {
+
+/* Footer */
+footer {
+    padding: 2% 0 1% 0;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 2.5vw;
+}
+
+.copyright {
+    color: #FBFFFE;
+    text-align: center;
+    font-size: max(1rem, 1.2vw);
+    margin: 3% 0;
+}
+
+
+/* Laptop Only */
+@media only screen and (min-width: 992px){
+    .navbar .navbar-nav .nav-item .nav-link{
       position: relative;
     }
-    .navbar .navbar-nav .nav-item::after {
+    .navbar .navbar-nav .nav-item .nav-link::after {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
       margin: auto;
-      background-color: #0a58ca;
+      background-color: #3f2b96;
       width: 0%;
       content: "";
       height: 2px;
       transition: all 0.5s;
     }
 
-    .navbar .navbar-nav .nav-item:hover::after {
+    .navbar .navbar-nav .nav-item .nav-link:hover::after {
       width: 75%;
     }
+
     .big-heading-container {
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: #fff;
@@ -304,59 +331,141 @@ footer-icon {
     }
 }
 
-@media only screen and (max-width: 820px){
+
+/* Mobile Version */
+@media only screen and (max-width: 991px){
     section {
         margin: 10% 5%;
     }
+
+     p {
+        font-size: 4vw;
+    }
+
+/* Navigation Bar */
+    .container-fluid, .nav-item {
+        padding: 0;
+    }
+
     .navbar {
-        max-height: 5rem;
         background-color: #013440;
+    }
+
+    .navbar-toggler {
+        margin-right: 5%;
+    }
+
+    .navbar-brand {
+        font-size: 3.5vw;
+    }
+
+    .nav-link, .navbar-brand {
         color: #FBFFFE;
     }
-    .nav-link {
-        color: #FBFFFE;
+
+    .collapse {
+        background-color: #013440;
+        padding-bottom: 7%;
+        margin-top: 1%;
     }
+
+     .nav-link {
+        font-size: 3.7vw;
+        opacity: .9;
+        margin-top: 4vh;
+    }
+
+    .nav-link:focus {
+        opacity: 1;
+    }
+
+
+/* Home Page */
     .big-heading-container {
         margin: 4rem 0;
+        font-size: 21vw;
         background-image: linear-gradient(45deg, #013440, #3f2b96);
         -webkit-background-clip: text;
         -moz-background-clip: text;
         -webkit-text-fill-color: transparent;
         -moz-text-fill-color: transparent;
     }
+
     .intro-container {
         display: flex;
-        align-items: center;
         flex-direction: column;
         justify-content: center;
         margin: 0 auto;
         color: #013440;
     }
-    .home-gif {
-        width: 100%;
+
+    .big-name {
+        font-size: 7.45vw;
     }
+
     .intro {
         margin-bottom: 10%;
     }
-    .skill-row {
+
+    .home-gif {
         width: 100%;
     }
+
+    .home-btn {
+        font-size: 5vw;
+    }
+
+
+/* Skill Section */
+    .section-header {
+        font-size: 9.5vw;
+    }
+
+    .skill {
+        font-size: 6vw;
+    }
+
+    .skill-row {
+        width: 100%;
+        margin: 6vh 0;
+    }
+
     .left-skill-img {
-        width: 34.75%;
+        width: 30%;
     }
+
     .python {
-        float: none;
-        margin: 0 32.625% 10%;
+        margin: 0;
     }
+
     .web-dev {
         width: 100%;
         margin-bottom: 10%;
     }
+
+
+/* Contact Page */
     .contact-form {
         width: 100%;
     }
+
     .submit-button {
         width: 50%;
+    }
+
+/* Footer */
+    .copyright {
+        font-size: 2.7vw;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .navbar-brand {
+        font-size: 4.5vw;
+    }
+
+    .nav-link {
+        font-size: 4.7vw;
     }
 }
 
