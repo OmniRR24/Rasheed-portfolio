@@ -58,14 +58,20 @@
     AOS.init();
   </script>
 
-<!--  <script>-->
-<!--    const myElement = document.getElementById('navbar-brand');-->
+  <script>
+    function closeNavbar() {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse.classList.contains('show')) {
+        navbarCollapse.classList.remove('show');
+      }
+    }
 
-<!--    myElement.addEventListener('click', () => {-->
-<!--      // Change the color of the element when clicked-->
-<!--      myElement.style.backgroundColor = '#FBFFFE;'; // New color-->
-<!--    });-->
-<!--  </script>-->
+    const myElement = document.getElementById('navbar-brand');
+
+    myElement.addEventListener('click', () => {
+      myElement.style.color = '#FBFFFE';
+    });
+  </script>
 
   <!-- Custom scripts for this template -->
 <!--  <script src="{{ url_for('static', filename='js/website.js')}}"></script>-->
